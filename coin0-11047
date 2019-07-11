@@ -1,0 +1,31 @@
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+	int N, K;
+	int coin[11] = { 0 };
+	int total = 0;
+	cin >> N >> K;
+	for (int i = 0; i < N; i++)
+	{
+		cin >> coin[i];
+	}
+	for (int i = 0; i < N; i++)
+	{
+		if (coin[N-i-1] > K)
+			continue;
+		total = total + K / coin[N - i-1];
+		K = K % coin[N - i-1];
+		if (K == 0)
+			break;
+	}
+
+	cout << total << endl;
+
+	return 0;
+}
