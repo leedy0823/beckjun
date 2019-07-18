@@ -1,7 +1,4 @@
 #include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
-#include <algorithm>
 
 using namespace std;
 
@@ -13,8 +10,7 @@ int main()
 	cin >> A >> B >> V;
 
 	temp = V - A;
-	temp = temp / (A - B);
-	date = temp - 2;
+	date = temp / (A - B);
 	V = V - date * (A - B);
 
 	while (1)
